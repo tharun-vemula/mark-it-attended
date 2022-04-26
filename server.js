@@ -2,7 +2,8 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser');
 
-const router = require('./routers/router');
+const attendeeRouter = require('./routers/attendee');
+const professorRouter = require('./routers/professor')
 
 const app = express();
 
@@ -11,7 +12,8 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(router);
+app.use(attendeeRouter);
+app.use(professorRouter);
 
 app.listen('1234', (req, res) => {
     console.log('Running')
