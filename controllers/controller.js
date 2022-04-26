@@ -5,3 +5,7 @@ exports.getHome = (req, res) => {
 exports.getLogin = (req, res) => {
     res.render('login')
 }
+
+exports.getScanner = (req, res) => {
+    res.render('main')
+}
