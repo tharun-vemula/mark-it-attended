@@ -1,5 +1,5 @@
 exports.getHome = (req, res) => {
-    res.render('index')
+    res.render('index-attendee')
 }
 
 exports.getLogin = (req, res) => {

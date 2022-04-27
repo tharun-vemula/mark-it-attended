@@ -1,20 +1,9 @@
 <%- include('partials/header'); %>
-    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/scripts/qrcode.js"></script>
-    <!-- CSS only -->
     <link rel="stylesheet" href="/styles/index-styles.css">
-<style>
-    #qrcode {
-        position: absolute;
-        top: 40%;
-        left : 50%;
-        transform : translate(-50%, -50%);
-    }
-
-
-</style>
+     <!-- CSS only -->
 </head>
 <body>
+
     <div class="container-xl-12">
         <nav class="navbar navbar-expand-lg navbar-light bg-light one">
             <div class="container-fluid">
@@ -46,42 +35,44 @@
             </div>
           </nav>
     </div>
+
     <div class="container">
-        <p class="text-center fs-4 py-5"> Scan the QR Code </p>
+      <table class="table table-hover justify-content-center my-5">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course</th>
+            <th scope="col">Attendance</th>
+            <th scope="col">Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Data Structures and Algorithms</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-
-    <div id="qrcode" class ="justify-content-center my-5" style="width:100px; height:100px; margin-top:15px;"></div>
-    
-    <script type="text/javascript">
-        var qrcode = new QRCode(document.getElementById("qrcode"), {
-            width: 100,
-            height: 100
-        });
-        try{
-            function makeCode() {
-            var elText = '<%-url%>';
-
-            qrcode.makeCode(elText);
-        }
-    }
-        catch(err){
-            console.log(err);
-        
-        }
-       
-
-        makeCode();
-
-        $("#text").
-            on("blur", function () {
-                makeCode();
-            }).
-            on("keydown", function (e) {
-                if (e.keyCode == 13) {
-                    makeCode();
-                }
-            });
-    </script>
+    <div class="container justify-content-center my-5">
+      <a href="/scan" class="btn btn-outline-primary "> Mark Your Attendance </a>
+    </div>
+   
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
