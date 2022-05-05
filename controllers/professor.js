@@ -1,11 +1,18 @@
+const bcrypt = require('bcrypt');
+
 exports.getHome = (req, res) => {
-    res.render('professor-home');
+    res.render('index-professor');
 }
 
-exports.getQR = (req, res) => {
-    const lecture = req.query.lecture;
-    const professorName = req.query.name;
-    const URL = `http://localhost:1234/${lecture}/${professorName}`;
+exports.getQR = async (req, res) => {
+    const lecture = req.params.lecture;
+    
+    const URL = `http://localhost:1234/mark/${lecture}`;
 
     res.render('make-qr', {url : URL})
+}
+
+exports.viewAttendancePerCourse = (req, res) => {
+    const id = req.params.id;
+    res.render('view-attendance');
 }

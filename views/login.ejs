@@ -11,13 +11,16 @@
         <div class="input-div">
             <form action="post">
                 <label for="username">Username</label>
-                <input type="text" name="" id="username">
+                <input type="text" name="username" id="username">
         </form>
         </div>
         <div class="input-div2">
-            <form action="post">
+            <form action="/login" method="post">
                 <label for="password">Password</label>
-                <input type="password" name="" id="password" class="pass">
+                <input type="password" name="password" id="password" class="pass">
+                <div>
+                    <button class="button" type="submit">Login</button>
+                </div>
             </form>
            
         </div>
@@ -27,9 +30,7 @@
             font-weight: bold;
             color:rgb(121, 120, 120);">Forgot Password?</p>
         </div>
-            <div>
-                <button class="button">Login</button>
-            </div>
+            
     </div>
 </body>
 </html>

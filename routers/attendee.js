@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.get('/', attendeeController.getHome)
 router.get('/login', attendeeController.getLogin)
+router.post('/login', attendeeController.postLogin)
 router.get('/scanner', attendeeController.getScanner)
 
 

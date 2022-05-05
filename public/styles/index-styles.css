@@ -13,3 +13,10 @@
     left: 0;
     text-align: center;
   }
+
+  @media only screen and (min-width: 920px) {
+    .ap{
+      margin-left: 35%;
+    }
+  }
+     
