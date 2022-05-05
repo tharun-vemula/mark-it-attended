@@ -1,15 +1,17 @@
+const Attendance = require('../models/attendance');
 exports.markAttendance = async (req, res) => {
-    const username = req.session.username;
-    const lecture = req.params.lecture;
+    // const username = req.session.username;
+    // const lecture = req.params.lecture;
 
-    const markAttendance = {
+    const markAttendance = new Attendance({
         date : new Date(),
-        name : username,
-        class : lecture,
-        semester : req.session.semester
-    }
+       // name : username,
+       name : "Tharun",
+        class : "lecture",
+        semester : "req.session.semester"
+    })
 
-   const result = await attendance.save(markAttendance)
+   const result = await markAttendance.save()
    console.log(result);
 
    res.redirect('/');
