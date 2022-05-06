@@ -7,8 +7,8 @@ exports.getHome = (req, res) => {
 exports.getQR = async (req, res) => {
     const lecture = req.params.lecture;
     
-    const URL = `https://attendance-iiit.herokuapp.com/mark/${lecture}`;
-
+   const URL = `http://attendance-iiit.herokuapp.com/mark/${lecture}`;
+    //const URL = `http://localhost:1234/mark/${lecture}`
     res.render('make-qr', {url : URL})
 }
 
