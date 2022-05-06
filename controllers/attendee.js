@@ -22,7 +22,7 @@ exports.postLogin = async (req, res) => {
             semester : user.semester
         }
 
-        res.redirect('/')
+        res.redirect('/home')
     }
     else{
         req.session.user = {
@@ -42,6 +42,6 @@ exports.getScanner = (req, res) => {
 exports.logout = (req, res) => {
     req.session.destroy(err => {
         console.log(err);
-        res.redirect('/login');
+        res.redirect('/');
       });
 }
