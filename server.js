@@ -54,7 +54,7 @@ app.use(attendanceRouter)
 mongoose
     .connect(MONGO_URI)
     .then(result => {
-        app.listen(1234, (req,res) =>{
+        app.listen(process.env.PORT || 1234, (req,res) =>{
             console.log("Running")
         });
     })
