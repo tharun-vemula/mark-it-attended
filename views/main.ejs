@@ -1,20 +1,25 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>QR Code Scanner</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width;initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+   -->
+   <%- include('partials/header'); %>
     <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/index-styles.css">
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
   </head>
 
   <body>
     <div id="container">
+      <%- include('partials/navigation'); %>
       <h1></h1>
 
-      <a id="btn-scan-qr">
-        <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
-      </a>
+      <!-- <a id="btn-scan-qr"> -->
+       <button id="btn-scan-qr" class="scan-btn" > Click Here</button>
+        <!-- <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg"> -->
+      <!-- </a> -->
 
       <canvas hidden="" id="qr-canvas"></canvas>
 

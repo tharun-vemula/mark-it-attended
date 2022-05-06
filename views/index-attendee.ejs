@@ -6,8 +6,8 @@
    <%- include('partials/navigation'); %>
     <div class="container py-4">
       <div>
-        <p class="text-start"> Name : <%= username %> </p>
-        <p class="text-start"> Semester : IV</p>
+        <p class="text-start"> Name : <%= user.name %> </p>
+        <p class="text-start"> Semester : <%= user.semester %></p>
       </div>
     </div>
     <div class="container">
@@ -43,7 +43,7 @@
     </div>
 
     <div style="text-align:  center;" class="container justify-content-center my-5">
-      <a href="/scan" class="btn btn-outline-dark"> Mark Your Attendance </a>
+      <a href="/scanner" class="btn btn-outline-dark"> Mark Your Attendance </a>
     </div>
    
     <!-- JavaScript Bundle with Popper -->

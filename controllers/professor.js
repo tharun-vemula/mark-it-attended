@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 
 exports.getHome = (req, res) => {
-    res.render('index-professor');
+    res.render('index-professor', {user : req.session.user});
 }
 
 exports.getQR = async (req, res) => {
